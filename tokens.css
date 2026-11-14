@@ -21,6 +21,16 @@
   --rubber: oklch(66.6% 0.224 34); --rubber-hi: oklch(74% 0.18 42); --rubber-lo: oklch(51.6% 0.177 34);
   --umber: oklch(24.3% 0.03 77); --bezel: oklch(90.5% 0.010 87); --case: oklch(95.5% 0.006 89);
   --hi: oklch(99.4% 0.004 90 / 0.8); --shade-1: oklch(24.3% 0.03 77 / 0.08); --shade-2: oklch(24.3% 0.03 77 / 0.16); --shade-3: oklch(40% 0.12 34 / 0.3);
+  /* Record recipe, from the app's Model/Design.swift (read by js/main.js for the canvas) */
+  --vinyl-black: #18181B; --vinyl-black-lip: #141417; --vinyl-black-edge: #0A0A0C; --vinyl-black-edge-hi: #242428;
+  --vinyl-smoke: #343238; --vinyl-smoke-lip: #28262C; --vinyl-smoke-edge: #1A191E; --vinyl-smoke-edge-hi: #46444C;
+  --vinyl-cream: #E9E2D3; --vinyl-cream-lip: #DED6C4; --vinyl-cream-edge: #B0A692; --vinyl-cream-edge-hi: #DED6C6;
+  --vinyl-ocean: #1F3B73; --vinyl-ocean-lip: #1A3264; --vinyl-ocean-edge: #0E1C3A; --vinyl-ocean-edge-hi: #2C4A84;
+  --vinyl-clay: #B5472B; --vinyl-clay-lip: #A53F25; --vinyl-clay-edge: #602212; --vinyl-clay-edge-hi: #BE5C40;
+  --label-signal: #FF4A1C; --label-lime: #C6EB3B; --label-sky: #8FB1FF; --label-blush: #F2B8D0; --label-butter: #E8D27A; --label-paper: #F4F2EE;
+  --record-ink: #121212; --record-spindle: #EDEBE6;
+  --field-sky: oklch(76.6% 0.119 266); --field-signal: oklch(66.6% 0.224 34); --field-lime: oklch(88.4% 0.194 121); --field-blush: oklch(84.2% 0.073 352); --field-butter: oklch(86.3% 0.111 96);
+  --metal: oklch(96% 0.004 90); --metal-2: oklch(84% 0.008 85); --metal-3: oklch(62% 0.01 80);
   --font-display: "Ranade", ui-sans-serif, system-ui, sans-serif; --font-body: var(--font-display);
   --font-outlier: "Gambarino", Georgia, serif; 
   --radius-card: 18px; --radius-inner: 10px; --radius-clip: 6px; --radius-pill: 999px; --rule-hair: 1px;

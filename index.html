@@ -26,7 +26,7 @@
       <a class="wordmark" href="./" aria-label="Ringlet home">r<span class="wordmark__i">ı<span class="wordmark__dot" aria-hidden="true"></span></span>nglet</a>
       <button class="slab__menu" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
       <nav class="slab__links" id="nav-links" aria-label="Main">
-        <a href="#tones">Hear a ring</a>
+        <a href="#press">Press a record</a>
         <a href="#how">How it works</a>
         <a href="#questions">Questions</a>
         <a class="slab__cta js-store" href="#download">Get the app</a>
@@ -35,68 +35,137 @@
   </header>
 
   <main id="main">
-    <!-- Hero: Counter posture. The download beside the real shelf screen. -->
+    <!-- Hero: a live Ringlet record. Press play, the arm drops, the record spins and its bars follow the sound. -->
     <section class="hero">
-      <div class="hero__ground" aria-hidden="true"></div>
+      <div class="hero__rings" aria-hidden="true"></div>
       <div class="container hero__grid">
         <div class="hero__text">
           <h1>Any sound, your ringtone.</h1>
-          <p class="lead">Songs, videos or your own voice, cut into a ringtone or alarm.</p>
+          <p class="lead">Songs, videos or your own voice, pressed into a ringtone or alarm.</p>
           <div class="hero__actions">
             <a class="store js-store" href="#download">
               <svg class="store__logo" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path fill="currentColor" d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>
               <span class="store__text"><small>Download on the</small>App Store</span>
             </a>
-            <button class="cap-pill" type="button" data-play-hero aria-describedby="hero-tone-note">
+            <button class="cap-pill" type="button" data-play-for="hero" aria-pressed="false">
               <span class="cap" aria-hidden="true"><span class="cap__glyph"></span></span>
-              <span class="cap-pill__text"><span class="cap-pill__title">Play Sunday Drive</span><span class="cap-pill__sub" id="hero-tone-note">A starter tone from the app</span></span>
+              <span class="cap-pill__text"><span class="cap-pill__title" data-play-label>Play Sunday Drive</span><span class="cap-pill__sub">A starter tone from the app</span></span>
             </button>
           </div>
         </div>
-        <figure class="screen screen--hero" data-slot="hero" data-kind="product" data-alt="Ringlet's shelf on iPhone: the Sunday Drive record, Play and Edit">
-          <img src="assets/screens/phone-01-shelf.webp" width="1056" height="2068" alt="Ringlet on iPhone: the Sunday Drive record on your shelf, with Play and Edit" fetchpriority="high" style="object-position: 50% 0%">
+        <figure class="stage stage--hero">
+          <div class="turntable" data-turntable="hero">
+            <div class="turntable__shadow" aria-hidden="true"></div>
+            <div class="platter" aria-hidden="true"><div class="disc"><span class="disc__wall" style="--k:1"></span><span class="disc__wall" style="--k:2"></span><span class="disc__wall" style="--k:3"></span><span class="disc__wall" style="--k:4"></span><span class="disc__wall" style="--k:5"></span><span class="disc__wall" style="--k:6"></span><span class="disc__wall" style="--k:7"></span><span class="disc__wall" style="--k:8"></span><canvas class="disc__face"></canvas><span class="disc__sheen"></span><span class="disc__holo"></span></div></div>
+            <svg class="arm" viewBox="0 0 100 100" aria-hidden="true">
+              <circle class="arm__base" cx="86" cy="16" r="13"/>
+              <circle class="arm__base-top" cx="86" cy="16" r="8.5"/>
+              <g class="arm__swing">
+                <rect class="arm__weight" x="88" y="2" width="9" height="11" rx="3" transform="rotate(38 92 8)"/>
+                <path class="arm__tube-edge" d="M86 16 L54 60 Q48 68 44 72"/>
+                <path class="arm__tube" d="M86 16 L54 60 Q48 68 44 72"/>
+                <rect class="arm__head" x="36" y="68" width="13" height="8" rx="2" transform="rotate(-36 42 72)"/>
+                <circle class="arm__cap" cx="86" cy="16" r="4.5"/>
+              </g>
+            </svg>
+          </div>
+          <figcaption class="stage__caption"><span class="stage__name">Sunday Drive</span><span class="stage__sub"><span class="stage__dot" aria-hidden="true"></span>Rings for all calls</span></figcaption>
         </figure>
       </div>
     </section>
 
-    <!-- Signature: the five starter tones, played by a port of the app's own synth. -->
-    <section class="tones" id="tones" aria-labelledby="tones-title">
-      <div class="container tones__grid">
-        <div class="tones__text">
-          <h2 id="tones-title">Five tones to start with.</h2>
-          <p class="lead">They come free with the app. Here they play on the same little synth.</p>
-          <fieldset class="cases" data-tones>
-            <legend class="visually-hidden">Starter tone</legend>
-            <input type="radio" name="tone" id="tone-sunday" value="0" checked><label class="case case--sunny" for="tone-sunday"><span class="case__band" aria-hidden="true"></span><span class="case__name">Sunday Drive</span><span class="case__meta num">100 bpm</span></label>
-            <input type="radio" name="tone" id="tone-poptick" value="1"><label class="case case--sunny" for="tone-poptick"><span class="case__band" aria-hidden="true"></span><span class="case__name">Pop Tick</span><span class="case__meta num">120 bpm</span></label>
-            <input type="radio" name="tone" id="tone-lowtide" value="2"><label class="case case--dreamy" for="tone-lowtide"><span class="case__band" aria-hidden="true"></span><span class="case__name">Low Tide</span><span class="case__meta num">84 bpm</span></label>
-            <input type="radio" name="tone" id="tone-hum" value="3"><label class="case case--moody" for="tone-hum"><span class="case__band" aria-hidden="true"></span><span class="case__name">Hum</span><span class="case__meta num">96 bpm</span></label>
-            <input type="radio" name="tone" id="tone-grain" value="4"><label class="case case--sunny" for="tone-grain"><span class="case__band" aria-hidden="true"></span><span class="case__name">Grain</span><span class="case__meta num">104 bpm</span></label>
-          </fieldset>
-        </div>
-        <div class="deck" data-deck>
-          <div class="deck__head">
-            <button class="cap cap--big" type="button" data-play aria-label="Play Sunday Drive" aria-pressed="false"><span class="cap__glyph" aria-hidden="true"></span></button>
-            <div class="deck__title">
-              <p class="deck__name" data-tone-name>Sunday Drive</p>
-              <p class="deck__meta"><span data-tone-bpm>100</span> bpm, <span data-tone-mood>sunny</span></p>
+    <!-- Playground: press your own record, the way the app's Make it yours screen does. -->
+    <section class="press" id="press" aria-labelledby="press-title">
+      <div class="container press__grid">
+        <div class="press__text">
+          <h2 id="press-title">Press your own record.</h2>
+          <p class="lead">Name it, pick a starter tone, then make it yours. Hit play and it spins.</p>
+          <div class="controls" data-controls>
+            <div class="control control--name">
+              <label for="ring-name">Name</label>
+              <input id="ring-name" name="ring-name" type="text" value="Summer nights mix" maxlength="22" autocomplete="off" spellcheck="false">
             </div>
-            <p class="deck__time num" aria-live="off"><span data-time>0:00.0</span></p>
+            <fieldset class="control">
+              <legend>Tone</legend>
+              <div class="chips">
+                <input type="radio" name="tone" id="tone-0" value="0" checked><label for="tone-0">Sunday Drive</label>
+                <input type="radio" name="tone" id="tone-1" value="1"><label for="tone-1">Pop Tick</label>
+                <input type="radio" name="tone" id="tone-2" value="2"><label for="tone-2">Low Tide</label>
+                <input type="radio" name="tone" id="tone-3" value="3"><label for="tone-3">Hum</label>
+                <input type="radio" name="tone" id="tone-4" value="4"><label for="tone-4">Grain</label>
+              </div>
+            </fieldset>
+            <fieldset class="control">
+              <legend>Vinyl</legend>
+              <div class="swatches">
+                <input type="radio" name="vinyl" id="vinyl-black" value="black" checked><label for="vinyl-black" style="--sw: var(--vinyl-black)"><span class="visually-hidden">Classic black</span></label>
+                <input type="radio" name="vinyl" id="vinyl-smoke" value="smoke"><label for="vinyl-smoke" style="--sw: var(--vinyl-smoke)"><span class="visually-hidden">Smoke</span></label>
+                <input type="radio" name="vinyl" id="vinyl-cream" value="cream"><label for="vinyl-cream" style="--sw: var(--vinyl-cream)"><span class="visually-hidden">Cream</span></label>
+                <input type="radio" name="vinyl" id="vinyl-ocean" value="ocean"><label for="vinyl-ocean" style="--sw: var(--vinyl-ocean)"><span class="visually-hidden">Ocean blue</span></label>
+                <input type="radio" name="vinyl" id="vinyl-clay" value="clay"><label for="vinyl-clay" style="--sw: var(--vinyl-clay)"><span class="visually-hidden">Clay</span></label>
+              </div>
+            </fieldset>
+            <fieldset class="control">
+              <legend>Label</legend>
+              <div class="swatches">
+                <input type="radio" name="label" id="label-signal" value="signal"><label for="label-signal" style="--sw: var(--label-signal)"><span class="visually-hidden">Signal orange</span></label>
+                <input type="radio" name="label" id="label-lime" value="lime"><label for="label-lime" style="--sw: var(--label-lime)"><span class="visually-hidden">Lime</span></label>
+                <input type="radio" name="label" id="label-sky" value="sky" checked><label for="label-sky" style="--sw: var(--label-sky)"><span class="visually-hidden">Sky</span></label>
+                <input type="radio" name="label" id="label-blush" value="blush"><label for="label-blush" style="--sw: var(--label-blush)"><span class="visually-hidden">Blush</span></label>
+                <input type="radio" name="label" id="label-butter" value="butter"><label for="label-butter" style="--sw: var(--label-butter)"><span class="visually-hidden">Butter</span></label>
+                <input type="radio" name="label" id="label-paper" value="paper"><label for="label-paper" style="--sw: var(--label-paper)"><span class="visually-hidden">Paper</span></label>
+              </div>
+            </fieldset>
+            <fieldset class="control">
+              <legend>Grooves</legend>
+              <div class="segs">
+                <input type="radio" name="groove" id="groove-lines" value="lines"><label for="groove-lines">Lines</label>
+                <input type="radio" name="groove" id="groove-dots" value="dots" checked><label for="groove-dots">Dots</label>
+                <input type="radio" name="groove" id="groove-rings" value="rings"><label for="groove-rings">Grooves</label>
+              </div>
+            </fieldset>
+            <fieldset class="control">
+              <legend>Finish</legend>
+              <div class="segs">
+                <input type="radio" name="finish" id="finish-matte" value="matte"><label for="finish-matte">Matte</label>
+                <input type="radio" name="finish" id="finish-gloss" value="gloss" checked><label for="finish-gloss">Gloss</label>
+                <input type="radio" name="finish" id="finish-holo" value="holo"><label for="finish-holo">Holo</label>
+              </div>
+            </fieldset>
           </div>
-          <div class="roll" role="img" aria-label="One bar of the tone in four lanes: kick, snare, hats and melody">
-            <div class="lane lane--kick" data-lane="kick"><span class="lane__name">Kick</span><div class="lane__steps"><span class="step on" style="--s:0"></span><span class="step" style="--s:1"></span><span class="step" style="--s:2"></span><span class="step" style="--s:3"></span><span class="step" style="--s:4"></span><span class="step" style="--s:5"></span><span class="step on" style="--s:6"></span><span class="step" style="--s:7"></span><span class="step on" style="--s:8"></span><span class="step" style="--s:9"></span><span class="step" style="--s:10"></span><span class="step" style="--s:11"></span><span class="step" style="--s:12"></span><span class="step" style="--s:13"></span><span class="step" style="--s:14"></span><span class="step" style="--s:15"></span></div></div>
-            <div class="lane lane--snare" data-lane="snare"><span class="lane__name">Snare</span><div class="lane__steps"><span class="step" style="--s:0"></span><span class="step" style="--s:1"></span><span class="step" style="--s:2"></span><span class="step" style="--s:3"></span><span class="step on" style="--s:4"></span><span class="step" style="--s:5"></span><span class="step" style="--s:6"></span><span class="step" style="--s:7"></span><span class="step" style="--s:8"></span><span class="step" style="--s:9"></span><span class="step" style="--s:10"></span><span class="step" style="--s:11"></span><span class="step on" style="--s:12"></span><span class="step" style="--s:13"></span><span class="step" style="--s:14"></span><span class="step" style="--s:15"></span></div></div>
-            <div class="lane lane--hat" data-lane="hat"><span class="lane__name">Hats</span><div class="lane__steps"><span class="step on" style="--s:0"></span><span class="step" style="--s:1"></span><span class="step on" style="--s:2"></span><span class="step" style="--s:3"></span><span class="step on" style="--s:4"></span><span class="step" style="--s:5"></span><span class="step on" style="--s:6"></span><span class="step" style="--s:7"></span><span class="step on" style="--s:8"></span><span class="step" style="--s:9"></span><span class="step on" style="--s:10"></span><span class="step" style="--s:11"></span><span class="step on" style="--s:12"></span><span class="step" style="--s:13"></span><span class="step on" style="--s:14"></span><span class="step" style="--s:15"></span></div></div>
-            <div class="lane lane--mel" data-lane="mel"><span class="lane__name">Melody</span><div class="lane__steps"><span class="step on" style="--s:0"></span><span class="step" style="--s:1"></span><span class="step on" style="--s:2"></span><span class="step" style="--s:3"></span><span class="step on" style="--s:4"></span><span class="step" style="--s:5"></span><span class="step" style="--s:6"></span><span class="step on" style="--s:7"></span><span class="step on" style="--s:8"></span><span class="step" style="--s:9"></span><span class="step on" style="--s:10"></span><span class="step" style="--s:11"></span><span class="step on" style="--s:12"></span><span class="step" style="--s:13"></span><span class="step" style="--s:14"></span><span class="step on" style="--s:15"></span></div></div>
-            <span class="roll__head" data-head aria-hidden="true"></span>
-          </div>
-          <p class="deck__note">With Ringlet Pro you tap your own rhythm onto a record. One payment, yours for good.</p>
         </div>
+        <figure class="stage stage--press">
+          <div class="turntable" data-turntable="press">
+            <div class="turntable__shadow" aria-hidden="true"></div>
+            <div class="platter" aria-hidden="true"><div class="disc"><span class="disc__wall" style="--k:1"></span><span class="disc__wall" style="--k:2"></span><span class="disc__wall" style="--k:3"></span><span class="disc__wall" style="--k:4"></span><span class="disc__wall" style="--k:5"></span><span class="disc__wall" style="--k:6"></span><span class="disc__wall" style="--k:7"></span><span class="disc__wall" style="--k:8"></span><canvas class="disc__face"></canvas><span class="disc__sheen"></span><span class="disc__holo"></span></div></div>
+            <svg class="arm" viewBox="0 0 100 100" aria-hidden="true">
+              <circle class="arm__base" cx="86" cy="16" r="13"/>
+              <circle class="arm__base-top" cx="86" cy="16" r="8.5"/>
+              <g class="arm__swing">
+                <rect class="arm__weight" x="88" y="2" width="9" height="11" rx="3" transform="rotate(38 92 8)"/>
+                <path class="arm__tube-edge" d="M86 16 L54 60 Q48 68 44 72"/>
+                <path class="arm__tube" d="M86 16 L54 60 Q48 68 44 72"/>
+                <rect class="arm__head" x="36" y="68" width="13" height="8" rx="2" transform="rotate(-36 42 72)"/>
+                <circle class="arm__cap" cx="86" cy="16" r="4.5"/>
+              </g>
+            </svg>
+          </div>
+          <figcaption class="stage__bar">
+            <button class="cap cap--big" type="button" data-play-for="press" aria-pressed="false" aria-label="Play your record"><span class="cap__glyph" aria-hidden="true"></span></button>
+            <span class="stage__title"><span class="stage__name" data-press-name>Summer nights mix</span><span class="stage__sub" data-press-sub>Sunday Drive, 100 bpm</span></span>
+            <span class="stage__time num" data-press-time>0:00.0</span>
+            <button class="shuffle" type="button" data-shuffle aria-label="Shuffle the design">
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 14 4 4-4 4"/><path d="m18 2 4 4-4 4"/><path d="M2 18h1.973a4 4 0 0 0 3.3-1.7l5.454-8.6a4 4 0 0 1 3.3-1.7H22"/><path d="M2 6h1.972a4 4 0 0 1 3.6 2.2"/><path d="M22 18h-6.041a4 4 0 0 1-3.3-1.8l-.359-.45"/></svg>
+            </button>
+          </figcaption>
+          <p class="press__note">With Ringlet Pro you can also tap your own rhythm onto a record. One payment, yours for good.</p>
+        </figure>
       </div>
     </section>
 
-    <!-- Pinned: one screen held while the four moments scroll past. -->
-    <section class="how" id="how" aria-labelledby="how-title">
+    <!-- How it works: the section floods a new colour for each step, like the App Store screenshots. -->
+    <section class="how" id="how" aria-labelledby="how-title" data-field="0">
+      <div class="how__rings" aria-hidden="true"></div>
       <div class="container how__grid">
         <div class="how__panels">
           <h2 id="how-title">From a sound to a ring.</h2>
@@ -147,10 +216,20 @@
       </div>
     </section>
 
-    <!-- Statement -->
-    <section class="statement" aria-label="Privacy">
-      <div class="container">
-        <p class="statement__line">Everything happens on your device. Your sounds never leave it.</p>
+    <!-- Statement: the promise set around a record that turns as you scroll. -->
+    <section class="statement" aria-labelledby="statement-title">
+      <div class="container statement__grid">
+        <div class="statement__ring" data-ring aria-hidden="true">
+          <svg viewBox="0 0 400 400">
+            <defs><path id="ring-path" d="M200,200 m-170,0 a170,170 0 1,1 340,0 a170,170 0 1,1 -340,0"/></defs>
+            <text><textPath href="#ring-path" startOffset="0" textLength="1062" lengthAdjust="spacing">Your sounds never leave your device. No accounts. No ads. No tracking.</textPath></text>
+          </svg>
+          <canvas class="statement__disc" data-mini-record></canvas>
+        </div>
+        <div class="statement__text">
+          <h2 id="statement-title">Everything happens on your device.</h2>
+          <p class="lead">Ringlet has no servers. Your songs, your voice and your rings stay with you.</p>
+        </div>
       </div>
     </section>
 
