@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Ringlet: turn any sound into your ringtone</title>
+  <meta name="description" content="Ringlet turns a song, a video or your own voice into a ringtone or wake-up alarm on iPhone and iPad. No ads, no subscription.">
+  <meta name="theme-color" content="#121212">
+  <meta property="og:title" content="Ringlet: any sound, your ringtone">
+  <meta property="og:description" content="Turn a song, a video or your own voice into a ringtone or wake-up alarm.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/og.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+  <link href="https://api.fontshare.com/v2/css?f[]=ranade@400,500,700&display=swap" rel="stylesheet">
+  <link href="https://api.fontshare.com/v2/css?f[]=gambarino@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="slab" data-nav>
+    <div class="container slab__inner">
+      <a class="wordmark" href="./" aria-label="Ringlet home">r<span class="wordmark__i">ı<span class="wordmark__dot" aria-hidden="true"></span></span>nglet</a>
+      <button class="slab__menu" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <nav class="slab__links" id="nav-links" aria-label="Main">
+        <a href="#tones">Hear a ring</a>
+        <a href="#how">How it works</a>
+        <a href="#questions">Questions</a>
+        <a class="slab__cta js-store" href="#download">Get the app</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero: Counter posture. The download beside the real shelf screen. -->
+    <section class="hero">
+      <div class="hero__ground" aria-hidden="true"></div>
+      <div class="container hero__grid">
+        <div class="hero__text">
+          <h1>Any sound, your ringtone.</h1>
+          <p class="lead">Songs, videos or your own voice, cut into a ringtone or alarm.</p>
+          <div class="hero__actions">
+            <a class="store js-store" href="#download">
+              <svg class="store__logo" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path fill="currentColor" d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>
+              <span class="store__text"><small>Download on the</small>App Store</span>
+            </a>
+            <button class="cap-pill" type="button" data-play-hero aria-describedby="hero-tone-note">
+              <span class="cap" aria-hidden="true"><span class="cap__glyph"></span></span>
+              <span class="cap-pill__text"><span class="cap-pill__title">Play Sunday Drive</span><span class="cap-pill__sub" id="hero-tone-note">A starter tone from the app</span></span>
+            </button>
+          </div>
+        </div>
+        <figure class="screen screen--hero" data-slot="hero" data-kind="product" data-alt="Ringlet's shelf on iPhone: the Sunday Drive record, Play and Edit">
+          <img src="assets/screens/phone-01-shelf.webp" width="1056" height="2068" alt="Ringlet on iPhone: the Sunday Drive record on your shelf, with Play and Edit" fetchpriority="high" style="object-position: 50% 0%">
+        </figure>
+      </div>
+    </section>
+
+    <!-- Signature: the five starter tones, played by a port of the app's own synth. -->
+    <section class="tones" id="tones" aria-labelledby="tones-title">
+      <div class="container tones__grid">
+        <div class="tones__text">
+          <h2 id="tones-title">Five tones to start with.</h2>
+          <p class="lead">They come free with the app. Here they play on the same little synth.</p>
+          <fieldset class="cases" data-tones>
+            <legend class="visually-hidden">Starter tone</legend>
+            <input type="radio" name="tone" id="tone-sunday" value="0" checked><label class="case case--sunny" for="tone-sunday"><span class="case__band" aria-hidden="true"></span><span class="case__name">Sunday Drive</span><span class="case__meta num">100 bpm</span></label>
+            <input type="radio" name="tone" id="tone-poptick" value="1"><label class="case case--sunny" for="tone-poptick"><span class="case__band" aria-hidden="true"></span><span class="case__name">Pop Tick</span><span class="case__meta num">120 bpm</span></label>
+            <input type="radio" name="tone" id="tone-lowtide" value="2"><label class="case case--dreamy" for="tone-lowtide"><span class="case__band" aria-hidden="true"></span><span class="case__name">Low Tide</span><span class="case__meta num">84 bpm</span></label>
+            <input type="radio" name="tone" id="tone-hum" value="3"><label class="case case--moody" for="tone-hum"><span class="case__band" aria-hidden="true"></span><span class="case__name">Hum</span><span class="case__meta num">96 bpm</span></label>
+            <input type="radio" name="tone" id="tone-grain" value="4"><label class="case case--sunny" for="tone-grain"><span class="case__band" aria-hidden="true"></span><span class="case__name">Grain</span><span class="case__meta num">104 bpm</span></label>
+          </fieldset>
+        </div>
+        <div class="deck" data-deck>
+          <div class="deck__head">
+            <button class="cap cap--big" type="button" data-play aria-label="Play Sunday Drive" aria-pressed="false"><span class="cap__glyph" aria-hidden="true"></span></button>
+            <div class="deck__title">
+              <p class="deck__name" data-tone-name>Sunday Drive</p>
+              <p class="deck__meta"><span data-tone-bpm>100</span> bpm, <span data-tone-mood>sunny</span></p>
+            </div>
+            <p class="deck__time num" aria-live="off"><span data-time>0:00.0</span></p>
+          </div>
+          <div class="roll" role="img" aria-label="One bar of the tone in four lanes: kick, snare, hats and melody">
+            <div class="lane lane--kick" data-lane="kick"><span class="lane__name">Kick</span><div class="lane__steps"><span class="step on" style="--s:0"></span><span class="step" style="--s:1"></span><span class="step" style="--s:2"></span><span class="step" style="--s:3"></span><span class="step" style="--s:4"></span><span class="step" style="--s:5"></span><span class="step on" style="--s:6"></span><span class="step" style="--s:7"></span><span class="step on" style="--s:8"></span><span class="step" style="--s:9"></span><span class="step" style="--s:10"></span><span class="step" style="--s:11"></span><span class="step" style="--s:12"></span><span class="step" style="--s:13"></span><span class="step" style="--s:14"></span><span class="step" style="--s:15"></span></div></div>
+            <div class="lane lane--snare" data-lane="snare"><span class="lane__name">Snare</span><div class="lane__steps"><span class="step" style="--s:0"></span><span class="step" style="--s:1"></span><span class="step" style="--s:2"></span><span class="step" style="--s:3"></span><span class="step on" style="--s:4"></span><span class="step" style="--s:5"></span><span class="step" style="--s:6"></span><span class="step" style="--s:7"></span><span class="step" style="--s:8"></span><span class="step" style="--s:9"></span><span class="step" style="--s:10"></span><span class="step" style="--s:11"></span><span class="step on" style="--s:12"></span><span class="step" style="--s:13"></span><span class="step" style="--s:14"></span><span class="step" style="--s:15"></span></div></div>
+            <div class="lane lane--hat" data-lane="hat"><span class="lane__name">Hats</span><div class="lane__steps"><span class="step on" style="--s:0"></span><span class="step" style="--s:1"></span><span class="step on" style="--s:2"></span><span class="step" style="--s:3"></span><span class="step on" style="--s:4"></span><span class="step" style="--s:5"></span><span class="step on" style="--s:6"></span><span class="step" style="--s:7"></span><span class="step on" style="--s:8"></span><span class="step" style="--s:9"></span><span class="step on" style="--s:10"></span><span class="step" style="--s:11"></span><span class="step on" style="--s:12"></span><span class="step" style="--s:13"></span><span class="step on" style="--s:14"></span><span class="step" style="--s:15"></span></div></div>
+            <div class="lane lane--mel" data-lane="mel"><span class="lane__name">Melody</span><div class="lane__steps"><span class="step on" style="--s:0"></span><span class="step" style="--s:1"></span><span class="step on" style="--s:2"></span><span class="step" style="--s:3"></span><span class="step on" style="--s:4"></span><span class="step" style="--s:5"></span><span class="step" style="--s:6"></span><span class="step on" style="--s:7"></span><span class="step on" style="--s:8"></span><span class="step" style="--s:9"></span><span class="step on" style="--s:10"></span><span class="step" style="--s:11"></span><span class="step on" style="--s:12"></span><span class="step" style="--s:13"></span><span class="step" style="--s:14"></span><span class="step on" style="--s:15"></span></div></div>
+            <span class="roll__head" data-head aria-hidden="true"></span>
+          </div>
+          <p class="deck__note">With Ringlet Pro you tap your own rhythm onto a record. One payment, yours for good.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pinned: one screen held while the four moments scroll past. -->
+    <section class="how" id="how" aria-labelledby="how-title">
+      <div class="container how__grid">
+        <div class="how__panels">
+          <h2 id="how-title">From a sound to a ring.</h2>
+          <article class="panel" data-panel="0">
+            <h3>Pick any sound</h3>
+            <p>A song on your iPhone, a file, the sound from a video, or your voice. Search finds it as you type.</p>
+            <figure class="screen screen--inline" data-slot="how-pick" data-kind="product" data-alt="Pick a song screen with search and Spinning lately">
+              <img src="assets/screens/phone-02-songs-sm.webp" width="528" height="1034" alt="" loading="lazy">
+            </figure>
+          </article>
+          <article class="panel" data-panel="1">
+            <h3>Cut the best part</h3>
+            <p>Ringlet suggests the intro, the chorus or the drop. Nudge it a second at a time; the fades are added for you.</p>
+            <p class="figure-serif num">30<span>seconds or less, for calls</span></p>
+            <figure class="screen screen--inline" data-slot="how-cut" data-kind="product" data-alt="Sculpt screen choosing 30 seconds of a track">
+              <img src="assets/screens/phone-04-sculpt-sm.webp" width="528" height="1034" alt="" loading="lazy">
+            </figure>
+          </article>
+          <article class="panel" data-panel="2">
+            <h3>Press your record</h3>
+            <p>Pick the vinyl, the label colour, a photo, the grooves and a matte, gloss or holo finish.</p>
+            <figure class="screen screen--inline" data-slot="how-press" data-kind="product" data-alt="Make it yours screen with vinyl, label and finish options">
+              <img src="assets/screens/phone-05-press-sm.webp" width="528" height="1034" alt="" loading="lazy">
+            </figure>
+          </article>
+          <article class="panel" data-panel="3">
+            <h3>Set where it rings</h3>
+            <dl class="rings">
+              <div><dt>Calls and texts</dt><dd>Added to your iPhone sounds</dd></div>
+              <div><dt>Just one person</dt><dd>Their calls get this sound</dd></div>
+              <div><dt>Wake-up alarm</dt><dd>Rings even on silent</dd></div>
+            </dl>
+            <figure class="screen screen--inline" data-slot="how-set" data-kind="product" data-alt="Where should it ring screen with calls, one person and alarm">
+              <img src="assets/screens/phone-06-assign-sm.webp" width="528" height="1034" alt="" loading="lazy">
+            </figure>
+          </article>
+        </div>
+        <div class="how__stage" aria-hidden="true">
+          <div class="how__sticky">
+            <figure class="screen screen--stage" data-stage>
+              <img src="assets/screens/phone-02-songs.webp" width="1056" height="2068" alt="" loading="lazy" data-stage-img="0" class="is-on">
+              <img src="assets/screens/phone-04-sculpt.webp" width="1056" height="2068" alt="" loading="lazy" data-stage-img="1">
+              <img src="assets/screens/phone-05-press.webp" width="1056" height="2068" alt="" loading="lazy" data-stage-img="2">
+              <img src="assets/screens/phone-06-assign.webp" width="1056" height="2068" alt="" loading="lazy" data-stage-img="3">
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Statement -->
+    <section class="statement" aria-label="Privacy">
+      <div class="container">
+        <p class="statement__line">Everything happens on your device. Your sounds never leave it.</p>
+      </div>
+    </section>
+
+    <!-- Switcher: iPhone and iPad, with what it needs. -->
+    <section class="devices" id="devices" aria-labelledby="devices-title">
+      <div class="container devices__grid">
+        <div class="devices__text">
+          <h2 id="devices-title">On iPhone and iPad.</h2>
+          <dl class="facts">
+            <div><dt>Needs</dt><dd>iOS or iPadOS 26 or later</dd></div>
+            <div><dt>Price</dt><dd>Free, with no ads and no subscription</dd></div>
+            <div><dt>Ringlet Pro</dt><dd>One purchase adds Make a beat</dd></div>
+          </dl>
+          <div class="seg" role="tablist" aria-label="Device">
+            <button type="button" role="tab" id="tab-phone" aria-selected="true" aria-controls="panel-phone">iPhone</button>
+            <button type="button" role="tab" id="tab-pad" aria-selected="false" aria-controls="panel-pad" tabindex="-1">iPad</button>
+          </div>
+        </div>
+        <div class="devices__stage">
+          <div class="devices__panel" role="tabpanel" id="panel-phone" aria-labelledby="tab-phone">
+            <figure class="screen screen--phone" data-slot="device-phone" data-kind="product" data-alt="Ringlet on iPhone: Pick a sound sheet">
+              <img src="assets/screens/phone-03-search.webp" width="1056" height="2068" alt="Ringlet on iPhone, searching songs and files" loading="lazy" style="object-position: 50% 0%">
+            </figure>
+          </div>
+          <div class="devices__panel" role="tabpanel" id="panel-pad" aria-labelledby="tab-pad">
+            <figure class="screen screen--pad" data-slot="device-pad" data-kind="product" data-alt="Ringlet on iPad: Pick a song with search">
+              <img src="assets/screens/ipad-02-songs.webp" width="1527" height="2002" alt="Ringlet on iPad, picking a song" loading="lazy" style="object-position: 50% 0%">
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Questions -->
+    <section class="questions" id="questions" aria-labelledby="questions-title">
+      <div class="container questions__grid">
+        <h2 id="questions-title">Good to know.</h2>
+        <dl class="qa">
+          <div><dt>Can I use Apple Music songs?</dt><dd>Apple Music streams are protected by Apple and can’t be used. Songs stored on your iPhone and files work.</dd></div>
+          <div><dt>How long can a ring be?</dt><dd>Pick 10, 15, 20 or 30 seconds. Ringtones for calls are 30 seconds or less.</dd></div>
+          <div><dt>Will the alarm ring on silent?</dt><dd>Yes. Ringlet asks for alarm permission the first time, then wakes you with your sound.</dd></div>
+          <div><dt>Do I need an account?</dt><dd>No. There’s nothing to sign up for.</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- Close: the download beside one last screen. -->
+    <section class="close" id="download" aria-labelledby="download-title">
+      <div class="container close__grid">
+        <div class="close__text">
+          <h2 id="download-title">Make your first ring.</h2>
+          <p class="lead">Free on the App Store for iPhone and iPad.</p>
+          <a class="store js-store" href="#download">
+            <svg class="store__logo" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path fill="currentColor" d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>
+            <span class="store__text"><small>Download on the</small>App Store</span>
+          </a>
+        </div>
+        <figure class="screen screen--close" data-slot="close" data-kind="product" data-alt="Pick a sound sheet: a song, a video, a file or your voice">
+          <img src="assets/screens/phone-07-source.webp" width="1056" height="2068" alt="Pick a sound: a song, a video, a file or your voice" loading="lazy" style="object-position: 50% 100%">
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer class="mast">
+    <div class="container">
+      <p class="mast__mark" aria-hidden="true">r<span class="wordmark__i">ı<span class="wordmark__dot"></span></span>nglet</p>
+      <div class="mast__row">
+        <nav class="mast__links" aria-label="Footer">
+          <a href="privacy.html">Privacy</a>
+          <a href="support.html">Support</a>
+          <a class="js-store" href="#download">App Store</a>
+        </nav>
+        <p class="mast__legal">© 2026 Ringlet. Apple, iPhone and iPad are trademarks of Apple Inc.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>window.hallmarkSlots = (m) => { for (const [k, v] of Object.entries(m)) { const s = document.querySelector(`[data-slot="${k}"]`); if (!s) continue; const im = new Image(); im.src = typeof v === 'string' ? v : v.src; im.alt = (typeof v === 'object' && v.alt) || s.dataset.alt || ''; s.querySelectorAll(':scope > img').forEach((o) => o.remove()); s.prepend(im); } };
+  document.querySelectorAll('[data-slot] img').forEach((i) => { if (i.complete && !i.naturalWidth) i.remove(); else i.addEventListener('error', () => i.remove(), { once: true }); });</script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
