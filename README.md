@@ -27,5 +27,4 @@ Settings › Pages › Deploy from a branch › `main` / root. The `.nojekyll` f
 ## Before launch
 
 1. **App Store link:** set `APP_STORE_URL` at the top of `js/main.js`. Until then every "Download on the App Store" button scrolls to the download section.
-2. **Support email:** replace the dashed `support email to be added` placeholder in `privacy.html` and `support.html`.
-3. **Swap a screen:** each screenshot sits in a `data-slot`. Replace the file in `assets/screens/` with the same name, or call `hallmarkSlots({ hero: 'assets/new.webp' })`.
+2. **Swap a screen:** each screenshot sits in a `data-slot`. Replace the file in `assets/screens/` with the same name, or call `hallmarkSlots({ hero: 'assets/new.webp' })`.
